@@ -1,0 +1,12 @@
+Name: add.rpc
+ListenOn: 0.0.0.0:8080
+
+Consul:
+  Host: 127.0.0.1:8500 # consul endpoint
+  Token: 'f0512db6-76d6-f25e-f344-a98cc3484d42' # consul ACL token (optional)
+  Key: add.rpc # service name registered to Consul
+  Meta:
+    Protocol: grpc
+  Tag:
+    - tag
+    - rpc
